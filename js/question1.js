@@ -6,18 +6,6 @@ Show/hide the error message everytime the validation runs.*/
 const form = document.querySelector("#contactForm");
 
 form.addEventListener("submit", validateName);
-
-function checkLength(value){
-	const trimmedVal = value.trim();
-	
-	
-	if(trimmedVal.length >= 2){
-		return true;
-	}else{
-		return false;
-	}
-}
-
 function validateName(event){
 	event.preventDefault();
 	
@@ -31,3 +19,14 @@ function validateName(event){
 		firstNameError.style.display = "block";
 	}
 }
+function checkLength(value){
+	const trimmedVal = value.trim();
+	
+	
+	if(trimmedVal.length >= 2){
+		return true;
+	}else{
+		return false;
+	}
+}
+
